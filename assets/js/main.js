@@ -53,11 +53,64 @@ console.log(a / b);
 //modulo
 console.log(a % b);
  
+//operadores de comparacion
+
+console.log(5<3) // simbolo de menor que <
+console.log(3>5) // simbolo de mayor que >
+console.log(5 == 5) // simbolo de igualdad ==
+
+
+//condicionales
+
+let nota = 7;
+//condicion
+if (nota >= 4){
+    console.log("aprobado")
+} else {
+    console.log("repitio!! F");
+}
+
+//funciones
+
+function saludar(nombre) {
+    console.log("hola" + nombre)
+}
+
+function esMayor(edad) {
+    if (edad >=18){
+        console.log("puede ver el contenido")
+    } else {
+        console.log("menor de edad no puedes ver el contenido!!!")
+    }
+}
+
+esMayor(23);
+
+
+function minusAmayus(texto) {
+    console.log(texto.toUpperCase())
+
+}
+
+minusAmayus("hola")
+
+
+
+
 
 let pepito = document.getElementById("h1");
 
-pepito.textContent = "holaaaa"
-pepito.style.color = "green"
-pepito.style.fontSize = "400px"
 
 
+pepito.addEventListener("mouseover", function(){
+    pepito.style.color = "green"
+});
+
+let boton = document.getElementById("botton");
+
+boton.addEventListener("click", function(){
+    document.getElementById("seccion2").scrollIntoView({
+        behavior: "smooth"
+    })
+
+})
